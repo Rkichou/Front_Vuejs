@@ -6,8 +6,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Titre du projet</title>
     <script type="module" src="/src/main.js"></script>
+    <style>
+      #footer {
+        background-color: #261c3e;
+      }
+      
+      .footer-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      .footer-item {
+        margin-right: 20px;
+        color: aliceblue;
+        flex-basis: 25%;
+        position: relative; /* Ajout de la position relative */
+      }
+      
+      .footer-item::after { /* Ajout de la pseudo-classe ::after */
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 1px;
+        background-color: white;
+      }
+      
+      .footer-item:last-child::after { /* Suppression de la ligne après le dernier élément */
+        display: none;
+      }
+      
+      .footer-item h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+      .footer-item span {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      
+      .footer-item a {
+        font-size: 14px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      
+      .footer-item a:hover {
+        color: #ffd901;
+      }
+      
+      .social-icons {
+        display: flex;
+        gap: 10px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .social-icons li {
+        display: inline-block;
+      }
+      
+      .social-icons li a {
+        color: #555;
+        font-size: 20px;
+        transition: color 0.3s ease;
+      }
+      
+      .social-icons li a:hover {
+        color: #ffbb00;
+      }
+      
+.headerV {
+  background-color: #261c3e;
+  padding: 20px;
+  color: #fff;
+}
+
+.headerV nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerV nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerV nav ul li {
+  margin-right: 20px;
+}
+
+.headerV nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.headerV nav ul li a:hover {
+  color: #ffd700;
+}
+
+.headerV .logo {
+  color: #ffd700;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+      </style>
   </head>
+  <header>
+    <div class="headerV">    
+      <nav>
+        <ul>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/#scroll_service">Nos Services</a></li>
+          <li><a href="/joueurs">Joueurs</a></li>
+          <li><a href="/offres">Offres</a></li>
+          <li><a href="/clubs">Clubs</a></li>
+          <li><a href="/Contact">Nous Contacter</a></li>
+
+        </ul>
+        <div class="logo">K-Scouting</div>
+      </nav>
+    </div>
+  </header>
   <body>
     <div id="app"></div>
   </body>
+  <footer id="footer" class="contact-footer" >
+    <div class="footer-section">
+      <div class="footer-item">
+        <h3>Adresse</h3>
+        <span>29 rue de La Huguenotte<br />
+          17000 La Rochelle<br />
+          France</span>
+      </div>
+      <div class="footer-item">
+        <h3>Email</h3>
+        <a href="mailto:KScouting@outlook.fr">KScouting@outlook.fr</a>
+      </div>
+      <div class="footer-item">
+        <h3>Téléphone</h3>
+        <span>06 63 23 85 52</span>
+      </div>
+      <div class="footer-item">
+        <h3>Réseaux sociaux</h3>
+        <ul class="social-icons">
+          <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+          <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+          <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+        </ul>
+      </div>
+    </div>
+  
+  </footer>
 </html>
